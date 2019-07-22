@@ -1,0 +1,19 @@
+title		    = Minimization	; Title of run
+
+; Parameters describing what to do, when to stop and what to save
+integrator	    = steep		;steepest descent
+emtol		    = 1000.0  	; max force J/mole
+emstep          = 0.01      ; energy step.
+nsteps		    = 50000	  	; max steps
+nstlist		    = 1		         
+cutoff-scheme   = Verlet    ; cut-off scheme
+ns_type		    = grid		    ; neighbour find
+rlist		    = 1.2		    ; neighbour cut-off
+coulombtype	    = PME		    ; long range
+rcoulomb	    = 1.2		    ; long range cut-off
+vdwtype         = cutoff
+vdw-modifier    = force-switch
+rvdw-switch     = 1.0
+rvdw		    = 1.2		    ; long range vdw cut-off
+pbc             = xyz 		    
+DispCorr        = no
